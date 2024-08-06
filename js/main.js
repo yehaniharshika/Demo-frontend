@@ -95,14 +95,31 @@ $("#detetepost").click(function () {
 });
 
 $("#getAll").click(function () {
+    let blogArray=[];
+
     $.ajax({
         url: "http://localhost:8080/blog/getAllPost",
         method: "GET",
         contentType: "application/json",
 
         success: function (results) {
+            blogArray = results;
             console.log(results);
-            alert('nice get all detail')
+
+            $("#tbl-tbody").empty();
+
+            blogArray.map((item,index) =>{
+
+                let record = `<tr>
+                <td class="id-value">${item.id}</td>
+                <td class="title-value">${item.title}</td>
+                <td class="text-value">${item.text}</td>
+                <td class="category-value">${item.category}</td>
+            </tr>`;
+                $("#tbl-tbody").append(record);
+            });
+
+            alert('nice get all detail for table')
         },
         error: function (error) {
             console.log(error)
