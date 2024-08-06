@@ -1,0 +1,35 @@
+/*#section1{
+    font-size: 30px;
+    font-weight: bold;
+    color: darkmagenta;
+    font-family: "Arial Black";
+}
+
+#section2{
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+    font-family: "Arial Black";
+}*/
+.section{
+
+}
+
+#sec{
+    background: skyblue;
+}
+
+.link{
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.nav-logo{
+    font-weight: bold;
+    color: red;
+}
+
+.name{
+    font-weight: bold;
+}
